@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/albeiroespitia/Node-Js-Pratice/issues"
   },
-  "homepage": "https://github.com/albeiroespitia/Node-Js-Pratice#readme"
+  "homepage": "https://github.com/albeiroespitia/Node-Js-Pratice#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }
