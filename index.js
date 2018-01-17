@@ -2,6 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,7 +20,7 @@ app.get('/api/product/:productId',(req,res)=>{
 
 app.post('/api/product', (req,res)=>{
     console.log(req.body)
-    res.send(200, {message: 'El producto se ha recibido'})
+    res.status(200).send({ message: 'El producto se ha recibod '})
 })  
 
 app.put('/api/product/:productId',(req,res)=>{
@@ -30,6 +31,14 @@ app.delete('/api/product/:productId',(req,res)=>{
     
 })
 
-app.listen(port, ()=>{
-    console.log(`Escuchando en el puerto ${port}...`)
+mongoose.connect('mongodb://localhost:27017/products',(err,res)=>{
+    if(err){
+        return console.log(err);
+    }
+    console.log('Conectado a mongodb correctamente')
+    
+    app.listen(port, ()=>{
+        console.log(`Escuchando en el puerto ${port}...`)
+    })
+
 })
