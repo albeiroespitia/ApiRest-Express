@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/albeiroespitia/Node-Js-Pratice#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
     "express": "^4.16.2",
+    "jwt-simple": "^0.5.1",
     "mongoose": "^4.13.9"
   },
   "devDependencies": {
